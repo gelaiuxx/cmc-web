@@ -6,7 +6,7 @@
     
         $sql_data = "SELECT appointments.day AS dayToday, COUNT(appointments.queue_no) AS slotsTaken 
         FROM appointments
-        WHERE appointments.day = ? && stat = 'pending'";
+        WHERE appointments.day = ?";
     
         $stmt = mysqli_prepare($con, $sql_data);
         mysqli_stmt_bind_param($stmt, "s", $day);

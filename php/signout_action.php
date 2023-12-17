@@ -8,3 +8,4 @@
     $myJSON = json_encode($myObj, JSON_FORCE_OBJECT);
     echo $myJSON;
 ?>
+
