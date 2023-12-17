@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{padding: 0; margin: 0; font-family: Inter; font-weight: 200;}
+
+:root{
+    --background_opaque1: rgba(0, 0, 0, 0.25);
+    --background_opaque2: rgba(0, 0, 0, 0.5);
+}
+
+#Admincontent{display: flex; flex-direction: row;}
+#sideNav{width: 310px; border: solid;}
+
+table, td {
+    border:1px solid black;
+    width: 100%;
+  }
+/* adminAppointmentContainer */
+#adminAppointmentContainer{display: flex; flex-direction: row; justify-content: space-around; padding: 20px; border: solid; flex: 1;}
+#adminAppointmentContainer header{font-size: 36px;text-align: center; padding-bottom: 20px;}
+.appointmentContainer{padding: 20px; border: 2px solid #A8CF45; background: #FBFEFC; border-radius: 10px; width: 310px; height: 712px; overflow-y: hidden;}
+.clientAppointment{ font-size: 16px; width: 279.93px; margin-bottom: 10px; padding: 5px 15px; line-height: 25px;/* height: 83px;*/ background: #F2F2F2; border-radius: 10px; filter: drop-shadow(var(--background_opaque1) 0 4px 4px); /*cursor: move;*/ cursor: grab;}
+
+/* patientContainer */
+#patientContainer{/*display: none;*/ width: 100%; height: 100%; background: var(--background_opaque2); z-index: 100; top: 0; position: fixed;}
+#patientModal{background: #F2F2F2; width: 800px; /*height: 500px;*/ border-radius: 10px; position: absolute; margin-left: 50%; margin-top: 25%; transform: translate(-50%, -50%);filter: drop-shadow(var(--background_opaque1) 0 4px 4px); display: flex; flex-direction: row; padding-bottom: 20PX;}
+#pMLeft, #pMRight{/*border: solid;*/ width: 50%; height: 95%; padding-inline: 20px; padding-top: 20px; line-height: 25px;}
+#btnXContainer{position: relative; height: 55px;}
+#btnX{line-height: 40px; font-family: Poppins; background: #D9D9D9; position: absolute; width:fit-content; right: 0px;padding: 3px 14.5px;font-size: xx-large;color: #868686; cursor: pointer; transition: 0.6s ease-in-out; border-radius: 50%;}
+#btnX:hover{background: #aaaaaa; color: #fff; transform: rotate(-180deg);}
+#pMRightConcern{background: #E8E8E8; width: 90%; height: 275px; border-radius: 7px; margin: 10px;}
+#pMRbuttons{text-align: right; padding-right: 20px; margin-top: 40px;}
+#pMRbuttons input{cursor: pointer; border: transparent; font-weight: 100; color:#fff; border-radius: 4px; width: 70px; height: 40px;}
+.decline{background: #B94C4C;}
+.accept{background: #3DBF6E;}
+#patientName{color: red;}
+#patientBirthdate{margin-right: 50px;}
+.decline:hover{background: #963d3d;}
+.accept:hover{background: #2e9254;}
+.patientID{font-size: 20px;font-weight: 500;}
+.patientDetails{font-weight: 500;}
+#patientDate{text-indent: 200px;}
+#pMRightConcern{text-transform: lowercase; padding: 10px; overflow-y:auto;}
+
+@media (max-width:1700px) {
+    #patientModal{margin-top:30%;}
+}

@@ -34,7 +34,7 @@
         if ($isPassword == true) {
             $status = 200;
             $data = $obj;
-            $_SESSION['user_id'] = $obj->id;
+            $_SESSION['user_id'] = $obj->user_id;
             $_SESSION['user_firstName'] = $obj->first_name;
             $_SESSION['user_lastName'] = $obj->last_name;
             $_SESSION['user_email'] = $obj->email;
@@ -58,7 +58,7 @@
                 if ($isPassword == true){
                     $status = 200;
                     $data = $obj;
-                    $_SESSION['admin_id'] = $obj->id;
+                    $_SESSION['admin_id'] = $obj->admin_id;
                     $_SESSION['admin_firstName'] = $obj->first_name;
                     $_SESSION['admin_lastName'] = $obj->last_name;
                     $_SESSION['admin_email'] = $obj->email;

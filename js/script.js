@@ -79,7 +79,7 @@ function fetchDoneAppointments() {
                     '<tr>' +
                     '<td></td>' +
                     '<td></td>' +
-                    '<td colspan="5"><img src="../../imgs/appointment.png" alt="No Appointments Image"></td>' +
+                    '<td colspan="5"><img src="../../imgs/nodoneappointments.png" alt="No Appointments Image"></td>' +
                     '</tr>' 
                 );
             }
@@ -127,7 +127,7 @@ $(document).ready(function () {
                 $('#lastName').val(patientDetails.last_name);
                 $('#middleName').val(patientDetails.middle_name);
                 $('#extensionName').val(patientDetails.extension_name);
-                $('#dob').val(patientDetails.birhdate);
+                $('#dob').val(patientDetails.birthdate);
                 $('#civilStatus').val(patientDetails.civil_status);
                 $('#sex').val(patientDetails.sex);
                 $('#religion').val(patientDetails.religion);
@@ -143,7 +143,7 @@ $(document).ready(function () {
                 $('#fathersName').val(patientDetails.fathers_name);
                 $('#motherMaidenName').val(patientDetails.mothers_maiden_name);
                 $('#province').val(patientDetails.province);
-                $('#city').val(patientDetails.municaplity);
+                $('#city').val(patientDetails.municipality);
 
                 // Show the modal
                 $('#appointmentModal').modal('show');
@@ -278,10 +278,11 @@ $('.cancel-button').on('click', function () {
 
 //Downlaoding success modal as image for reference
 function downloadAsImage() {
-    // var dropdownButton = document.querySelector('.dropdown-button');
-    // dropdownButton.style.display = 'none';
-    // var cancelButton = document.querySelector('.cancel-button');
-    // cancelButton.style.display = 'none';
+    var dropdownButton = document.querySelector('.dropdown-button');
+    dropdownButton.style.display = 'none';
+    var cancelButton = document.querySelector('.cancel-button');
+    cancelButton.style.display = 'none';
+    
     var modalContent = document.querySelector('.success-modal');
     html2canvas(modalContent).then(function (canvas) {
         var imageData = canvas.toDataURL('image/png');
@@ -357,3 +358,4 @@ function addDependents(event) {
         }
     });
 }
+

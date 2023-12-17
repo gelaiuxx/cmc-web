@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $response = [];
 
-    $sqlInsert = "INSERT INTO appointments (patient_id, category, day, cheif_complaint, stat, time, user_id)
+    $sqlInsert = "INSERT INTO appointments (patient_id, category, day, chief_complaint, stat, time, user_id)
         VALUES ('$patientId', '$category', '$appointmentDate', '$chiefComplaint', 'Pending', '$time', $user_id)";
 
     if ($con->query($sqlInsert) === TRUE) {

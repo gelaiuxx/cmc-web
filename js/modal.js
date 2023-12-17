@@ -66,6 +66,7 @@ function openAddDependentModal() {
     addDependentModal.style.display = 'block';
 }
 
+
 function submitAddDependentForm(event) {
 
     event.preventDefault();
@@ -81,6 +82,66 @@ function closeDepartmentLegendsModal() {
     var departmentLegend = document.getElementById('departmentLegend');
     departmentLegend.style.display = 'none';
 }
+
+
+
+
+
+// //FOR CONFIRMATION MODAL IN MAKING APPOINTMENT
+
+// $('.submit-button').on('click', function () {
+//     openConfirmationModal();
+// });
+
+// function openConfirmationModal() {
+//     console.log('Opening confirmation modal');  // Add this line for debugging
+//     var modal = document.getElementById('confirmationModal');
+//     modal.style.display = 'block';
+// }
+
+// // Function to close the confirmation modal
+// function closeConfirmationModal() {
+//     var modal = document.getElementById('confirmationModal');
+//     modal.style.display = 'none';
+// }
+
+// // Function to handle the confirmation and submit the form
+// function confirmSubmit() {
+//     showSuccessModal();
+
+//     closeConfirmationModal();
+// }
+
+
+// $('.confirm-button').on('click', function () {
+//     showSuccessModal();
+// });
+
+// // Function to open the success modal
+// function showSuccessModal() {
+//     // Show the loader
+//     document.getElementById('loader').style.display = 'block';
+
+//     setTimeout(function () {
+//         // Hide the loader
+//         document.getElementById('loader').style.display = 'none';
+
+//         // Show the success modal
+//         document.getElementById('successModal').style.display = 'block';
+//     }, 1000);
+
+// }
+// // Function to close the success modal
+// function closeSuccessModal() {
+//     var successModal = document.getElementById('successModal');
+//     successModal.style.display = 'none';
+// }
+
+// // Function to print the success modal
+// function printSuccessModal() {
+//     window.print(); // Trigger browser's print functionality
+// }
+
 
 
 
