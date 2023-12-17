@@ -179,7 +179,7 @@ if (!isset($_SESSION["user_email"])) {
                 <div class="card">
                     <div>
                         <div class="patients-catered" id="patients-catered">
-                            100
+                            10
                             <!-- ================ AJAX ONLOAD DATA FETCH ================= -->
                         </div>
                         <div class="cardName">No. of Patients Catered per day</div>

@@ -192,13 +192,14 @@ function validateForm() {
 // Function to check appointment availability
 function checkAppointmentAvailability() {
     var appointmentDate = $('#appointmentDate').val();
-    var category = $('#category').val();
+    // var category = $('#category').val();
 
 
     $.ajax({
         type: 'POST',
         url: '../../php/check_availability.php', 
-        data: { appointmentDate: appointmentDate , category: category},
+        data: { appointmentDate: appointmentDate},
+        // data: { appointmentDate: appointmentDate , category: category},
         dataType: 'json',
         success: function(response) {
             if (response.success) {
