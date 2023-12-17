@@ -1,0 +1,1037 @@
+* {
+    font-family: "Inter";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.appointments-title {
+    margin-top: 20px;
+    font-size: 36px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.department-legends-btn {
+    margin-left: auto;
+    margin-top: 30px;
+    margin-right: 50px;
+    font-size: 20px;
+    padding:18px 36px;
+    background-color: var(--accent);
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#departmentLegend{
+    display: none;
+}
+
+
+.department-legends-btn:hover{
+    background-color: #28ba72;
+    
+
+}
+
+.appointments-title span {
+    margin-right: 10px;
+}
+
+.department-legend-modal .modal-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.department-legend-modal .modal-content::-webkit-scrollbar-thumb {
+    background-color: #4caf4fa8;
+
+}
+
+
+.dlclose-btn{
+    float: right;
+    font-size: 40px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.department-legend-modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.department-legend-modal .modal-content{
+    max-height: 700px;
+    overflow-y: auto;
+    border-radius: 10px;
+    width: 70%;
+
+}
+
+.department-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.department-info ul li {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+
+.dlTitle{
+    color: var(--accent);
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+
+.modal-content .modal-left, .modal-content .modal-right{
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    min-height: 500px;
+    background: var(--white);
+    padding: 24px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    border: 1px solid rgba(163, 159, 159, 0.548);
+    width: 48%;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.modal-content .modal-right{
+    margin-left: 10px;
+}
+.modal-content .modal-left{
+    margin-left: 5px;
+}
+
+
+/* ================== My dependents Details List ============== */
+.appointments-page {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 30px;
+    margin: 20px 20px 0 10px;
+}
+
+.appointments-page .dependents {
+    position: relative;
+    min-height: 700px;
+    background: var(--white);
+    max-height: 700px;
+    overflow-y: auto;
+    padding: 24px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+
+}
+
+.appointments-page .dependents::-webkit-scrollbar {
+    width: 8px;
+}
+
+.appointments-page .dependents::-webkit-scrollbar-thumb {
+    background-color: #4caf4fa8;
+
+}
+
+
+
+.appointments-page .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cardHeader h2 {
+    font-weight: 600;
+    margin-top: 24px;
+    color: var(--text);
+    font-size: 28px;
+}
+
+.cardHeader .btn {
+    position: relative;
+    padding: 12px 18px;
+    font-weight: 500;
+    background: var(--accent);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.cardHeader .btn:hover{
+    background-color: #28ba72;
+}
+
+
+
+.dependent-card {
+    background-color: #DCF5D1;
+    padding: 10px;
+    height: 180px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dependent-card p {
+    margin: 5px 0;
+    color: var(--text);
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.btn {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.btn:hover {
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+.cardHeader .add-icon {
+    font-weight: bold;
+}
+
+.noDependents {
+    text-align: center;
+    font-size: 22px;
+
+
+
+
+}
+
+.dependents img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  
+}
+
+#error-message-div{
+    color: rgb(224, 34, 34);
+    font-size: 18px;
+}
+
+
+
+.department-sched-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+.department-sched-table th, .department-sched-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.department-sched-table th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.department-sched-table tbody tr:hover {
+    background-color: #e6f7ff;
+}
+
+
+
+/* ================== Appointments Table Details List ============== */
+.appointments-page .appointments-table {
+    position: relative;
+    min-height: 500px;
+    margin-right: 10px;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.appointments-page .appointments-table table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.details .appointments-table thead td {
+    font-weight: 200;
+    color: #FBFEFD;
+    margin-left: 10px;
+}
+
+#myAppointmentsTable thead {
+    background-color: #28ba72;
+    font-weight: 100;
+    color: white;
+
+
+}
+
+.appointments-page .appointments-table tbody tr {
+    color: var(--text);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: left !important;
+}
+
+.appointments-page .appointments-table tbody td {
+    padding: 10px;
+    text-align: left !important;
+}
+
+
+.appointments-page .appointments-table table tr td {
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+}
+
+
+.appointments-page .appointments-table table tbody tr:hover,
+#myAppointmentsTable tbody tr:nth-child(even):hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+
+#myAppointmentsTable tbody tr:nth-child(even) {
+    background-color: #DCF5D1;
+}
+
+
+.appointments-page .appointments-table {
+    position: relative;
+    min-height: 700px;
+    overflow-y: auto;
+    max-height: 700px;
+}
+
+.appointments-page .appointments-table::-webkit-scrollbar {
+    width: 8px;
+}
+
+.appointments-page .appointments-table::-webkit-scrollbar-thumb {
+    background-color: #4caf4fa8;
+
+}
+
+.appointments-page .appointments-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.view-button {
+    color: var(--text);
+    width: 90%;
+    background-color: white;
+    border: 2px solid var(--accent);
+    padding: 10px 22px;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.view-button i {
+    margin-right: 4px;
+}
+
+.view-button:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+
+/* ================== Add Dependent Modal Style  ============== */
+
+.modal-content-dependent {
+    background-color: #fefefe;
+    margin: 7% auto;
+    border-radius: 24px 0 0 24px;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 50%;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.modal-content-dependent::-webkit-scrollbar {
+    width: 12px;
+}
+
+.modal-content-dependent::-webkit-scrollbar-thumb {
+    background-color: #4caf4fa8;
+
+}
+
+.modal-content-dependent {
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+}
+
+.modal-content-dependent label {
+    display: block;
+    font-size: 18px;
+    color: var(--text);
+    margin-bottom: 15px;
+
+}
+
+.dependent-submit-button {
+    width: 100%;
+    background-color: var(--accent);
+    padding: 15px;
+    color: var(--white);
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 30px;
+
+}
+
+hr {
+    margin-top: 10px;
+    border: 1.5px solid rgba(128, 128, 128, 0.497);
+}
+
+/* ================== Make an appointment moadal ============== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+.close {
+    float: right;
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 2% auto;
+    border-radius: 24px;
+    max-height: 700px;
+    overflow-y: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.modal-step {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.modal-step h2 {
+    margin-bottom: 20px;
+    color: var(--accent);
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.appNote{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(62, 62, 233);
+}
+.left-side .cat{
+    margin-top: 10px;
+}
+
+.right-side .date{
+    margin-top: 10px;
+}
+.left-side,
+.right-side {
+    width: 48%;
+    margin-top: 10px;
+    /* Adjust as needed */
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    /* Align to the top */
+}
+
+.right-side {
+    margin-left: 20px;
+}
+
+.label-container {
+    margin-bottom: 20px;
+
+}
+
+.modal-content label {
+    display: block;
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--text);
+    margin-bottom: 15px;
+
+}
+
+input,
+select {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #888;
+    border-radius: 12px;
+}
+
+.next1-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    padding: 15px;
+    background: var(--accent);
+    color: white;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-left: 600px;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.next-button,
+.submit-button {
+    background-color: var(--accent);
+}
+
+.prev-button {
+    background-color: var(--primary);
+}
+
+.prev-button,
+.next-button,
+.submit-button {
+    display: inline-block;
+    width: 30%;
+    margin: 20px;
+    padding: 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev-button ion-icon,
+.next-button ion-icon {
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+
+
+.next-button:hover,
+.prev-button:hover {
+    background-color: var(--primary);
+}
+
+.prev-button:hover {
+    background-color: var(--accent);
+}
+
+
+.next1-button ion-icon {
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: bolder;
+
+
+}
+
+#chiefComplaint {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #888;
+    border-radius: 12px;
+    resize: vertical;
+
+}
+
+.progress-bar-container {
+    margin-bottom: 20px;
+
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.progress-step {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid #17B53F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.completed {
+    background-color: #4caf50;
+    /* Green */
+    color: white;
+    border: 2px solid #4caf50;
+}
+
+.progress-line {
+    flex-grow: 1;
+    height: 4px;
+    background-color: #17B53F;
+    z-index: 1;
+
+}
+
+
+/* Viewing Appointment Details Modal Styles */
+#viewAppointmentDetailsModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#viewAppointmentDetailsModal .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    height: 55%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#viewAppointmentDetailsModal .close {
+    color: #aaa;
+    float: right;
+    font-size: 48px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#viewAppointmentDetailsModal .close:hover,
+#viewAppointmentDetailsModal .close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+#viewAppointmentDetailsModal h2 {
+    text-align: left;
+    margin-left: 20px;
+    font-size: 30px;
+    color: var(--accent);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#viewAppointmentDetailsModal #viewAppointmentModalBody {
+    padding: 20px;
+}
+
+
+#viewAppointmentDetailsModal p {
+    text-align: left;
+    margin-left: 5px;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+
+
+
+/* Styles for the Confirmation Modal */
+.confirmation-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.confirmation-modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    border-radius: 24px;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 30%;
+    height: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-modal-content .close {
+    float: right;
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #021206;
+}
+
+.confirm-button,
+.close-button,
+.print-button,
+.cancel-button {
+    display: inline-block;
+    width: 30%;
+    margin-top: 40px;
+    padding: 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.confirm-button-container {
+    text-align: center;
+}
+
+.confirm-button,
+.print-button {
+    background-color: var(--accent);
+    margin-left: 10px;
+}
+
+.close-button,
+.cancel-button {
+    background-color: var(--white);
+    border: 2px solid var(--accent);
+    color: var(--text);
+    margin-right: 10px;
+}
+
+
+.confirmation-modal-content h2 {
+    margin-bottom: 20px;
+    color: var(--accent);
+    margin-top: 20px;
+    font-size: 30px;
+    margin-top: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.confirmation-modal-content p {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+/* Styles for the Loader */
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    display: none;
+    /* Initially hide the loader */
+}
+
+
+/* Add keyframes for the loader spin animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Styles for Success Modal */
+.success-modal {
+
+    display: none;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.599);
+
+}
+
+#successModal .modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 24px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 50%;
+}
+
+#successModal img {
+    width: 30%;
+    height: 30%;
+    margin-top: 10px;
+
+}
+
+#successModal h2 {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+
+.booking-details {
+    border: 2px solid #ddd;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+
+
+#successModal .confirm-button,
+#successModal .close-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+}
+
+/* Styles for Success Modal Content */
+.success-modal-content {
+    text-align: center;
+}
+
+.success-modal-content img {
+    width: 100px;
+    height: 100px;
+}
+
+
+.note {
+    margin-top: 20px;
+    color: rgb(23, 23, 175);
+    text-align: justify;
+    font-size: 16px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.success-modal .modal-content h2 {
+    margin-bottom: 20px;
+    color: var(--accent);
+    margin-top: 20px;
+    font-size: 30px;
+    margin-top: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.success-modal-content>p {
+    margin-bottom: 20px;
+}
+
+.success-modal-content>div {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.success-modal-content h3 {
+    margin-bottom: 10px;
+}
+
+.success-modal-content button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.success-modal-content .cancel-button {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+}
+
+.success-modal-content .print-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+}
+
+/* Style for the dropdown container */
+.dropdown-container {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-button {
+    padding: 15px;
+    background-color: var(--accent);
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    width: 2 50px;
+    margin-top: 40px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+   
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: -5%;
+}
+
+.dropdown-option {
+    padding: 10px;
+    width: 150px;
+    text-decoration: none;
+    display: block;
+    color: var(--secondary);
+}
+
+.dropdown-option:hover {
+    background-color: #ddd;
+}
+
+.dropdown-container:hover .dropdown-content {
+    display: block;
+}
+
+
+.download-button{
+    width: 30rem;
+    padding: 16px;
+    background-color: var(--accent);
+    color: var(--white);
+    margin-top: 20PX;
+    font-size: 20px;
+    border: none;
+    border-radius: 12px;
+    justify-content: center;
+}
+
+.download-button:hover{
+    background-color: var(--primary);
+}
+
+#error-message{
+    color: rgb(230, 19, 19);
+    font-size: 18px;
+}
+/* Hide the buttons when printing */
+@media print {
+
+    .dropdown-button,
+    .cancel-button,
+    .dropdown-container {
+        display: none;
+    }
+
+    .modal-content{
+        width: 100%;
+        height: 100%;
+        overflow-y: hidden;
+    }
+
+    #successModal img{
+        display: none;
+    }
+
+
+}

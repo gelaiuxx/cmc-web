@@ -1,0 +1,93 @@
+:root {
+    --blue: #E5EAEB;
+    --white: #fff;
+    --primary: #A8CF45;
+    --secondary: #DCF5D1;
+    --background: #FBF5EE;
+    --text: #020303;
+    --nav: #e9f0e7;
+    --accent: #28844B;
+
+}
+.historyBox{
+    background-color:var(--white);
+    padding: 20px;
+    margin: 30px;
+    border-radius: 20px;
+    height: 87vh;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+}
+
+.history-header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+}
+
+.header {
+    width: 50%;
+}
+
+.history-search{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding: 10px 30px 10px 0;
+    width: 50%;
+}
+
+.history-search input{
+    border-radius: 20px;
+    width: 400px;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.historyBox .historyContainer table tr td {
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    width: 25%;
+}
+
+#searchHistoryButton {
+    padding: 14px;
+    margin-right: 50px;
+    cursor: pointer;
+    background-color: var(--accent);
+    color: white;
+    margin-left: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+.history-search ion-icon{
+  
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#doneTable tbody tr:nth-child(even) {
+    background-color: #f5f6f4;
+    color: var(--text);
+}
+
+
+#doneTable thead {
+    background-color: var(--accent);
+    font-weight: 100;
+    color: white;
+}
+
+#doneTable tbody tr:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.historyBox table {
+    width: 100%;
+    border-collapse: collapse;
+}

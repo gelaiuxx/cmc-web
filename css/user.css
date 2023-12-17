@@ -1,0 +1,136 @@
+:root {
+    --blue: #E5EAEB;
+    --white: #fff;
+    --primary: #A8CF45;
+    --secondary: #DCF5D1;
+    --background: #FBF5EE;
+    --text: #020303;
+    --nav: #e9f0e7;
+    --accent: #28844B;
+
+}
+
+.list-of-users{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--white);
+    height: 90vh;
+}
+
+.users-content {
+    margin: 10px;
+    padding: 10px;
+}
+
+.user-header{
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.header{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: 10px;
+}
+
+.patient-search{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding: 10px 30px 10px 0;
+    width: 50%;
+
+}
+
+
+.searchbox input{
+    border-radius: 20px;
+    width: 400px;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.user-header h1 {
+    color: var(--accent);
+}
+
+.patients-div{
+    overflow-y: scroll;
+    width: 100%;
+    height: 70vh;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.show-AllPatients{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+.patient-box {
+    display: flex;
+    width: 32.2%;
+    background-color: #c4e07e;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0 0 10px;
+    float: left;
+    box-shadow: 0 0 5px rgba(98, 86, 84, 0.3);
+}
+
+.patient-box:hover{
+    background-color: var(--accent);
+}
+
+.patient-box:hover .patient-box-data ul li{
+    background-color: var(--accent);
+    color: #fff;
+
+}
+
+.patient-img, .patient-box-data{
+    padding: 10px;
+    width: 50%;
+}
+
+.patient-img img {
+    padding: 10px;
+    width: 100%;
+}
+
+.patient-box-data{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.patient-box-data ul li {
+    list-style-type: none;
+    color: #000;
+    padding: 2px;
+}
+
+#searchPatientButton {
+    padding: 14px;
+    margin-right: 50px;
+    cursor: pointer;
+    background-color: var(--accent);
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+.patient-search ion-icon{
+    font-size: 15px;
+    font-weight: bolder;
+}
