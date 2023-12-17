@@ -1,0 +1,134 @@
+:root {
+    --blue: #E5EAEB;
+    --white: #fff;
+    --primary: #A8CF45;
+    --secondary: #DCF5D1;
+    --background: #FBF5EE;
+    --text: #020303;
+    --nav: #e9f0e7;
+    --accent: #28844B;
+
+}
+
+#calendarSlot {
+    /* margin: 30px 50px; */
+    height: 80vh;
+    box-shadow: 2px 2px 2px 2px #D9D9D9;
+    border-radius: 20px;
+    padding: 30px 50px;
+    background-color: var(--white);
+}
+
+/* #calendarSlot > div{border: solid;} */
+#calendarHeader {
+    /*border: solid;*/
+    display: flex;
+    width: 100%;
+}
+
+#MonthContainer {
+    /*border: solid;*/
+    width: 80%;
+    font-size: 30px;
+    color: var(--accent);
+    font-weight: 600;
+    padding: 25px 0 0 30px;
+}
+
+#portal {
+    width: 20%;
+    display: flex;
+    flex: row;
+}
+
+#prev,
+#next {
+    width: 50%;
+    padding: 25px 0 0 50px;
+    font-weight: 600;
+}
+
+#prev:hover,
+#next:hover,
+button:hover {
+    color: var(--accent);
+    cursor: pointer;
+}
+
+
+button {
+    background: transparent;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+button:hover{
+    font-size: 25px;
+}
+
+#bodyContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#availableSlots{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#availableSlots table {
+    border-collapse: collapse;
+    background-color: #d0e0a8;
+}
+
+#availableSlots th,
+#availableSlots td {
+    padding: 8px;
+    text-align: left;
+}
+
+#availableSlots td {
+    padding: 10px;
+    border-collapse: collapse;
+    border: 10px solid #fff;
+    width: 200px;
+}
+
+#availableSlots th {
+    text-align: center;
+    background: var(--accent);
+    color: var(--white);
+}
+
+#availableSlots tr {
+    border-collapse: collapse;
+    border: 10px solid #fff;
+    height: 63px;
+    width: 30px;
+}
+
+#availableSlots td:hover {
+    background: var(--accent);
+}
+
+td.highlight {
+    background-color: #a7e6a7;
+}
+
+#portal {
+    cursor: pointer;
+}
+
+.allocation {
+    width: 100%;
+    height: 25px;
+    text-align: center;
+    padding-top: 3px;
+    border-radius: 15px;
+}
